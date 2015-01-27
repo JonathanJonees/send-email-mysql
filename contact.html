@@ -1,0 +1,56 @@
+
+<!DOCTYPE HTML>
+<?php  include "sendmail.php";?>
+<html lang="pt-br">
+
+<head>
+     <meta charset = "UTF-8"/>
+     <meta name="viewport" content="width-devide-width">
+     <title>Contact</title>
+     <link rel="stylesheet" type="text.css" href="css/style.css"/>
+    
+
+</head>
+<body>
+<header>
+     <div class="menu">
+     <nav>
+     <ul>
+     <li><a href="#">Home</a></li>
+     <li><a href="#">Service </a></li>
+     <li><a href="#">Contact</a></li>                
+     </ul>
+     </nav>
+     <a href="index.html" border="0">
+     <img src="img/logo.png" id="logo">
+     </a>
+     </div>
+</header>
+     <img src="img/img1.jpg"id="bg-index">	
+	 <?php if($msg):?>
+	 <p><?php echo $msg;?></p>
+     <form action="sendmail.php" method="post" ><!--id="form" onsubmit="validaForm(); return false;" >-->
+	 <table width="200" border="0" align="center" id="form-contato">
+	 <tr>
+	 <td><input class="input" type="text" tabindex="1" name="nome" placeholder="Nome Completo" id="nome" /></td>
+	 <td><input class="input"  type="text" tabindex="1" name="email" placeholder="E-mail" id="email" /></td>
+     </tr>
+	 <tr>
+	 <td><input class="input"   type="text" tabindex="1" name="tel" placeholder="(DDD) + Telefone" id="tel" /></td>
+	 <td><input class="input"  type="text" name="celular" placeholder="(DDD) + Celular" id="celular" /></td>
+     </tr>
+	 <tr>
+	 <td><input class="input"  type="text" name="cidade" placeholder="Cidade / Estado"  id="cidade" /></td>
+	 <td><input class="input"  type="text" name="empresa" placeholder="Empresa" id="empresa" /></td>
+     </tr>
+	 <tr>
+	 <td colspan="2"><textarea class="input_c"  name="mensagem" placeholder="Mensagem"  id="mensagem" rows="10" cols="10"  ></textarea></td>
+     </tr>
+     </table>    
+     <input name="submit" id="enviar_contato" value="ENVIAR" class="submit" type="submit">	 
+     </form>
+     
+
+</body>
+</html>
+
